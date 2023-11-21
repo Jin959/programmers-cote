@@ -1,24 +1,24 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/150370
 
 /* 
-* Å×½ºÆ® 17 case ´ÙÀ½ÀÇ ¿¹¿Ü¿¡¼­ °É·È¾ú´Ù. ¿ùÀÌ 12ÀÇ ¹è¼öÀÌ¸é
-* ÀÔ·Â°ª ¡µ "2020.12.17", ["A 12"], ["2010.01.01 A", "2019.12.17 A"]
-* ±â´ñ°ª ¡µ [1, 2]
+* í…ŒìŠ¤íŠ¸ 17 case ë‹¤ìŒì˜ ì˜ˆì™¸ì—ì„œ ê±¸ë ¸ì—ˆë‹¤. ì›”ì´ 12ì˜ ë°°ìˆ˜ì´ë©´
+* ìž…ë ¥ê°’ ã€‰ "2020.12.17", ["A 12"], ["2010.01.01 A", "2019.12.17 A"]
+* ê¸°ëŒ“ê°’ ã€‰ [1, 2]
 * 
-* ³¯Â¥ Çü½Ä °´Ã¼ ´Ù ÇÊ¿ä¾ø´Ù.
-* ±×³É ÀÏÀÚ·Î ´Ù ¹Ù²ã¼­ ºñ±³ÇÏ´Â °Ô ÄÚµåµµ Âª°í ½Ã°£µµ ´ú °É¸®°í
-* ¿¹¿Ü ³¯ °æ¿ìµµ º°·Î ¾ø´Ù.
+* ë‚ ì§œ í˜•ì‹ ê°ì²´ ë‹¤ í•„ìš”ì—†ë‹¤.
+* ê·¸ëƒ¥ ì¼ìžë¡œ ë‹¤ ë°”ê¿”ì„œ ë¹„êµí•˜ëŠ” ê²Œ ì½”ë“œë„ ì§§ê³  ì‹œê°„ë„ ëœ ê±¸ë¦¬ê³ 
+* ì˜ˆì™¸ ë‚  ê²½ìš°ë„ ë³„ë¡œ ì—†ë‹¤.
 *
 * https://school.programmers.co.kr/questions/51273
 * https://cheonjoosung.github.io/blog/pg-privacy
 */
 
-// 1. terms À¯È¿±â°£Àº ´ÞÀÌ´Ù. ÀÌ¸¦ pribacy ¿ù¿¡ ´õÇÏ°í 12 ÃÊ°ú(13)ÀÌ¸é ³âÀ» 1 ´õÇÑ´Ù. ÀÏÀº -1 ÇÑ´Ù.
-// 2. ¸ðµç ´ÞÀº 28ÀÏ ÀÌ ¸¶Áö¸·³¯ÀÌ´Ù.
-// 3. ¿À´ÃÀÌ À¯È¿±â°£ ¸¶Áö¸· ³¯ÀÌ¸é º¸Á¸ÇÑ´Ù.
-// Á¸ÀçÇÏ´Â ¾à°üÀº ³ª¿ÀÁö¾Ê´Â´Ù.
-// ´Þ°ú ¿ùÀº µÎÀÚ¸®·Î¸¸ ³ªÅ¸³­´Ù. ÇÑÀÚ¸®ÀÏ °æ¿ì 05.02 µî.
-// ÆÄ±âÇÒ privacy´Â ¹Ýµå½Ã 1°³ ÀÌ»óÀÌ´Ù.
+// 1. terms ìœ íš¨ê¸°ê°„ì€ ë‹¬ì´ë‹¤. ì´ë¥¼ pribacy ì›”ì— ë”í•˜ê³  12 ì´ˆê³¼(13)ì´ë©´ ë…„ì„ 1 ë”í•œë‹¤. ì¼ì€ -1 í•œë‹¤.
+// 2. ëª¨ë“  ë‹¬ì€ 28ì¼ ì´ ë§ˆì§€ë§‰ë‚ ì´ë‹¤.
+// 3. ì˜¤ëŠ˜ì´ ìœ íš¨ê¸°ê°„ ë§ˆì§€ë§‰ ë‚ ì´ë©´ ë³´ì¡´í•œë‹¤.
+// ì¡´ìž¬í•˜ëŠ” ì•½ê´€ì€ ë‚˜ì˜¤ì§€ì•ŠëŠ”ë‹¤.
+// ë‹¬ê³¼ ì›”ì€ ë‘ìžë¦¬ë¡œë§Œ ë‚˜íƒ€ë‚œë‹¤. í•œìžë¦¬ì¼ ê²½ìš° 05.02 ë“±.
+// íŒŒê¸°í•  privacyëŠ” ë°˜ë“œì‹œ 1ê°œ ì´ìƒì´ë‹¤.
 
 #include <string>
 #include <vector>
@@ -107,14 +107,14 @@ void getExpired() {
         Date agreed = privacies[i].date;
         char term = privacies[i].term;
 
-        // 1. terms À¯È¿±â°£Àº ´ÞÀÌ´Ù. ÀÌ¸¦ pribacy ¿ù¿¡ ´õÇÏ°í ÀÏÀº -1 ÇÑ´Ù.
-        // ¿©±â¼­ ÀÏÀº -1 ¾ÈÇÏ°í ¿À´ÃÀÌ À¯È¿±â°£ º¸´Ù ÀÌ»ó(À¯È¿±â°£°ú °°À½ Æ÷ÇÔ)ÀÌ¸é expire
+        // 1. terms ìœ íš¨ê¸°ê°„ì€ ë‹¬ì´ë‹¤. ì´ë¥¼ pribacy ì›”ì— ë”í•˜ê³  ì¼ì€ -1 í•œë‹¤.
+        // ì—¬ê¸°ì„œ ì¼ì€ -1 ì•ˆí•˜ê³  ì˜¤ëŠ˜ì´ ìœ íš¨ê¸°ê°„ ë³´ë‹¤ ì´ìƒ(ìœ íš¨ê¸°ê°„ê³¼ ê°™ìŒ í¬í•¨)ì´ë©´ expire
         Date expire = { agreed.year, agreed.month + terms[term], agreed.day };
 
 
-        // 12 ÃÊ°ú(13)ÀÌ¸é ³âÀ» 1 ´õÇÑ´Ù. À¯È¿±â°£Àº 100´Þ ±îÁö °¡´ÉÇÔ.
+        // 12 ì´ˆê³¼(13)ì´ë©´ ë…„ì„ 1 ë”í•œë‹¤. ìœ íš¨ê¸°ê°„ì€ 100ë‹¬ ê¹Œì§€ ê°€ëŠ¥í•¨.
         if (expire.month > 12) {
-            // 12ÀÇ ¹è¼öÀÏ ¶§, Å×½ºÆ® ÄÉÀÌ½º °É¸². ¿ùÀÌ 12ÀÇ ¹è¼öÀÌ¸é ÇÑÇØ ´õ ¸¹ÀÌ ´õÇØÁö°í 0¿ùÀÌ µÇ¾îº­·È´Ù.
+            // 12ì˜ ë°°ìˆ˜ì¼ ë•Œ, í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ ê±¸ë¦¼. ì›”ì´ 12ì˜ ë°°ìˆ˜ì´ë©´ í•œí•´ ë” ë§Žì´ ë”í•´ì§€ê³  0ì›”ì´ ë˜ì–´ë²¼ë ¸ë‹¤.
             if (expire.month % 12 == 0) {
                 expire.year += (expire.month / 12 - 1);
                 expire.month = 12;
@@ -124,8 +124,8 @@ void getExpired() {
                 expire.month = expire.month % 12;
             }
         }
-        // 3. ¿À´ÃÀÌ À¯È¿±â°£ ¸¶Áö¸· ³¯ÀÌ¸é º¸Á¸ÇÑ´Ù. = ¿À´ÃÀÌ À¯È¿±â°£ º¸´Ù Å©¸é expire
-        // ¹æ±Ý, day´Â À¯ÁöÇß±â ¶§¹®¿¡ ¿À´ÃÀÌ À¯È¿±â°£ º¸´Ù ÀÌ»ó(À¯È¿±â°£°ú °°À½ Æ÷ÇÔ)ÀÌ¸é expire
+        // 3. ì˜¤ëŠ˜ì´ ìœ íš¨ê¸°ê°„ ë§ˆì§€ë§‰ ë‚ ì´ë©´ ë³´ì¡´í•œë‹¤. = ì˜¤ëŠ˜ì´ ìœ íš¨ê¸°ê°„ ë³´ë‹¤ í¬ë©´ expire
+        // ë°©ê¸ˆ, dayëŠ” ìœ ì§€í–ˆê¸° ë•Œë¬¸ì— ì˜¤ëŠ˜ì´ ìœ íš¨ê¸°ê°„ ë³´ë‹¤ ì´ìƒ(ìœ íš¨ê¸°ê°„ê³¼ ê°™ìŒ í¬í•¨)ì´ë©´ expire
         if (today >= expire) {
             // cout << expire.year << ' ' << expire.month<< ' ' << expire.day << endl;
             expired.push_back(i + 1);

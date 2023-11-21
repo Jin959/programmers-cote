@@ -1,12 +1,12 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/169199?language=cpp
 
 /*
-* 1. °ÝÀÚ Å½»öÀº ¿©·¯ Ä­À¸·Î ÀÌµ¿ ÇÒ ¼öµµ ÀÖ´Ù.
-* 2. ÀÌµ¿ È½¼ö°¡ cost ÀÌ¹Ç·Î ÀÌµ¿ Ä­°ú´Â ¹«°üÇÏ´Ù. Áï, °£¼±ÀÇ °¡ÁßÄ¡°¡ µ¿ÀÏÇÑ Å½»öÀÌ´Ù.
+* 1. ê²©ìž íƒìƒ‰ì€ ì—¬ëŸ¬ ì¹¸ìœ¼ë¡œ ì´ë™ í•  ìˆ˜ë„ ìžˆë‹¤.
+* 2. ì´ë™ íšŸìˆ˜ê°€ cost ì´ë¯€ë¡œ ì´ë™ ì¹¸ê³¼ëŠ” ë¬´ê´€í•˜ë‹¤. ì¦‰, ê°„ì„ ì˜ ê°€ì¤‘ì¹˜ê°€ ë™ì¼í•œ íƒìƒ‰ì´ë‹¤.
 * 
-* DFS Ã³·³ flag¿Í cnt º¯¼ö·Î ÇØ°áÇÒ ¼ö ¾ø´Ù.
-* BFS Å½»ö Áß ¿©·¯ °¡Áö¿¡¼­ ´©ÀûµÇ±â ¶§¹® °¢ °¡Áöº°·Î cnt ÇØÁÖ¾î¾ß ÇÏ´Âµ¥
-* visted ¹è¿­¿¡ ±â·ÏÇÏ°Å³ª dist ¹è¿­À» ÇÏ³ª ´õ ¸¸µé¾î »ç¿ëÇÑ´Ù.
+* DFS ì²˜ëŸ¼ flagì™€ cnt ë³€ìˆ˜ë¡œ í•´ê²°í•  ìˆ˜ ì—†ë‹¤.
+* BFS íƒìƒ‰ ì¤‘ ì—¬ëŸ¬ ê°€ì§€ì—ì„œ ëˆ„ì ë˜ê¸° ë•Œë¬¸ ê° ê°€ì§€ë³„ë¡œ cnt í•´ì£¼ì–´ì•¼ í•˜ëŠ”ë°
+* visted ë°°ì—´ì— ê¸°ë¡í•˜ê±°ë‚˜ dist ë°°ì—´ì„ í•˜ë‚˜ ë” ë§Œë“¤ì–´ ì‚¬ìš©í•œë‹¤.
 */
 
 #include <string>
@@ -98,6 +98,6 @@ int solution(vector<string> board_) {
 
     if (visited[goal.y][goal.x] == 0) return -1;
 
-    // ½ÃÀÛÁ¡ ¹æ¹® ¿©ºÎ Ã¼Å©¸¦ À§ÇØ bfs() ¿¡¼­ 1À» ¸ÕÀú ´õÇØÁÖ°í Å½»ö ½ÃÀÛÇÑ °Í Á¦¿Ü
+    // ì‹œìž‘ì  ë°©ë¬¸ ì—¬ë¶€ ì²´í¬ë¥¼ ìœ„í•´ bfs() ì—ì„œ 1ì„ ë¨¼ì € ë”í•´ì£¼ê³  íƒìƒ‰ ì‹œìž‘í•œ ê²ƒ ì œì™¸
     return visited[goal.y][goal.x] - 1;
 }

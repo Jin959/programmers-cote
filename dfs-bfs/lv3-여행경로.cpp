@@ -30,7 +30,7 @@ void init() {
         string to = ticket[1];
 
         adj[from].push_back(to);
-        rest[from + to]++;    // Æ¼ÄÏ °³¼ö ¿Ã¸®±â
+        rest[from + to]++;    // í‹°ì¼“ ê°œìˆ˜ ì˜¬ë¦¬ê¸°
     }
 }
 
@@ -43,7 +43,7 @@ void dfs(string now) {
     }
 
     for (string nxt : adj[now]) {
-        if (!rest[now + nxt]) continue;   // Æ¼ÄÏÀÌ ³²¾ÆÀÖÀ¸¸é
+        if (!rest[now + nxt]) continue;   // í‹°ì¼“ì´ ë‚¨ì•„ìˆìœ¼ë©´
 
         tmp_track.push_back(nxt);
         rest[now + nxt]--;

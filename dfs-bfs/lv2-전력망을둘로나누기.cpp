@@ -1,15 +1,15 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/86971
 
 /*
-* °£¼±À» ÇÏ³ª¾¿ Áö¿ö º¸¸é¼­ ¿ÏÀü Å½»öÇÏ¿© ³ëµåÀÇ °³¼ö¸¦ ÇÏ³ªÇÏ³ª ¼¾´Ù.
-* n°³ÀÇ ¼ÛÀüÅ¾Àº ÇÏ³ªÀÇ Æ®¸® ÇüÅÂ·Î ¿¬°áµÇ¾î ÀÖ´Ù.
-* Áï, µÑ·Î ³ª´³À» ¶§ ÇÑÂÊ¸¸ Å½»öÇÏ¸é ³²Àº ÇÏ³ªÀÇ Æ®¸®ÀÇ ³ëµå¼ö´Â ¾Ë ¼ö ÀÖ´Ù.
+* ê°„ì„ ì„ í•˜ë‚˜ì”© ì§€ì›Œ ë³´ë©´ì„œ ì™„ì „ íƒìƒ‰í•˜ì—¬ ë…¸ë“œì˜ ê°œìˆ˜ë¥¼ í•˜ë‚˜í•˜ë‚˜ ì„¼ë‹¤.
+* nê°œì˜ ì†¡ì „íƒ‘ì€ í•˜ë‚˜ì˜ íŠ¸ë¦¬ í˜•íƒœë¡œ ì—°ê²°ë˜ì–´ ìžˆë‹¤.
+* ì¦‰, ë‘˜ë¡œ ë‚˜ëˆ´ì„ ë•Œ í•œìª½ë§Œ íƒìƒ‰í•˜ë©´ ë‚¨ì€ í•˜ë‚˜ì˜ íŠ¸ë¦¬ì˜ ë…¸ë“œìˆ˜ëŠ” ì•Œ ìˆ˜ ìžˆë‹¤.
 * 
-* solution()Àº ´ÙÀ½°ú °°Àº ·ÎÁ÷À¸·Î ±¸¼ºµÈ´Ù.
-* 1. init()À¸·Î Adjacency list¿Í ¹æ¹®±â·ÏÀ» ÃÊ±âÈ­ ÇÑ´Ù.
-* 2. deleteEdgeGetAdj() ·Î °£¼±À» ÇÏ³ª ÅÃÇÏ¿© Á¦°ÅÇÑ µÚ, ±×¿¡ ¸Â°Ô Adjacency list ¸¦ ±¸¼ºÇÑ´Ù.
-* 3. dfs()·Î Æ®¸®¸¦ Å½»öÇÑ´Ù.
-* 4. 2°³ÀÇ Æ®¸® Áß, Å½»öÇÑ Æ®¸®ÀÇ ³ëµå ¼ö(cnt)¿Í Å½»öÇÏÁö ¾ÊÀº ºÎºÐ(n - cnt) ÀÇ Àý´ë°ª Â÷¸¦ ±¸ÇÏ°í ÃÖ¼Ò°ª °»½Å.
+* solution()ì€ ë‹¤ìŒê³¼ ê°™ì€ ë¡œì§ìœ¼ë¡œ êµ¬ì„±ëœë‹¤.
+* 1. init()ìœ¼ë¡œ Adjacency listì™€ ë°©ë¬¸ê¸°ë¡ì„ ì´ˆê¸°í™” í•œë‹¤.
+* 2. deleteEdgeGetAdj() ë¡œ ê°„ì„ ì„ í•˜ë‚˜ íƒí•˜ì—¬ ì œê±°í•œ ë’¤, ê·¸ì— ë§žê²Œ Adjacency list ë¥¼ êµ¬ì„±í•œë‹¤.
+* 3. dfs()ë¡œ íŠ¸ë¦¬ë¥¼ íƒìƒ‰í•œë‹¤.
+* 4. 2ê°œì˜ íŠ¸ë¦¬ ì¤‘, íƒìƒ‰í•œ íŠ¸ë¦¬ì˜ ë…¸ë“œ ìˆ˜(cnt)ì™€ íƒìƒ‰í•˜ì§€ ì•Šì€ ë¶€ë¶„(n - cnt) ì˜ ì ˆëŒ€ê°’ ì°¨ë¥¼ êµ¬í•˜ê³  ìµœì†Œê°’ ê°±ì‹ .
 */
 
 #include <string>
@@ -37,10 +37,10 @@ void init() {
 void deleteEdgeGetAdj(int edgeIdx) {
     for (int i = 0; i < n - 1; i++) {
         if (i == edgeIdx) continue;
-        // ³ëµå ³Ñ¹ö 1ºÎÅÍ
+        // ï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½ 1ï¿½ï¿½ï¿½ï¿½
         int v1 = wires[i][0] - 1;
         int v2 = wires[i][1] - 1;
-        // ¹«Çâ ±×·¡ÇÁ
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½
         adj[v1].push_back(v2);
         adj[v2].push_back(v1);
     }

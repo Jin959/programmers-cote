@@ -1,10 +1,10 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/169199?language=cpp
 
 /*
-* ½Ã°£ ÃÊ°ú ³².
+* ì‹œê°„ ì´ˆê³¼ ë‚¨.
 * 
-* dfs ¿ÏÀü Å½»ö½Ã »ç¿ëÇÏ¸ç, bfs´Â ÃÖ´Ü°æ·Î ¹× ÀÓÀÇÀÇ °æ·Î¸¦ Ã£À» ¶§ »ç¿ëÇÕ´Ï´Ù.
-* ÃÖ´Ü°Å¸® ¹®Á¦´Â dfs·Î ±¸Çö½Ã, promisingÀ» Àû¿ëÇØµµ TLE°¡ ³ª¿Ã °¡´É¼ºÀÌ ±²ÀåÈ÷ ³ô½À´Ï´Ù.
+* dfs ì™„ì „ íƒìƒ‰ì‹œ ì‚¬ìš©í•˜ë©°, bfsëŠ” ìµœë‹¨ê²½ë¡œ ë° ìž„ì˜ì˜ ê²½ë¡œë¥¼ ì°¾ì„ ë•Œ ì‚¬ìš©í•©ë‹ˆë‹¤.
+* ìµœë‹¨ê±°ë¦¬ ë¬¸ì œëŠ” dfsë¡œ êµ¬í˜„ì‹œ, promisingì„ ì ìš©í•´ë„ TLEê°€ ë‚˜ì˜¬ ê°€ëŠ¥ì„±ì´ êµ‰ìž¥ížˆ ë†’ìŠµë‹ˆë‹¤.
 * https://school.programmers.co.kr/questions/46830
 */
 
