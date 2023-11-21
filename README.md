@@ -2,4 +2,4 @@
 프로그래머스 코테 학습
 
 
-## [DFS/BFS](./DFSAndBFS)
+## [DFS/BFS](./dfs-bfs)
